@@ -1,0 +1,47 @@
+<div class="container mt-4 bg-body">
+  <div class="nav-bar  d-flex justify-content-between mb-5">
+   <div class="title d-flex">
+    <img class="logo pb-3" src="assets/imgs/Logo.png" alt="">
+    <h3 class="mt-2">MAIDS.CC</h3>
+</div>
+   <div class="icons d-flex justify-content-center align-items-center">
+    <i class="fa-brands fa-facebook-f me-3" style="color: #676D79;"></i>
+    <i class="fa-brands fa-twitter me-3" style="color: #676D79;"></i>
+    <i class="fa-brands fa-linkedin-in me-3" style="color: #676D79;"></i>
+    <i class="fa-brands fa-instagram" style="color: #676D79;"></i>
+   </div>
+  </div>  
+
+<div class="list mt-5 mb-4">
+
+   <h2 class="mt-5 text-center users"> OUR USERS</h2>
+   <input [(ngModel)]="searchTerm" type="text" class="form-control w-50 mx-auto my-5" placeholder="Search by ID..." name="" id="">
+    <div class="row pt-5 position-relative">
+        <div *ngIf="isloading" class=" loading position-absolute d-flex justify-content-center align-items-center">
+            <span class="loader">.....</span>
+          </div>
+        <div class="col-md-6 pt-3 pb-5 card rounded-0 border-start-0 border-top-0"*ngFor="let i of data|searchId:searchTerm">
+            <div class="userImage d-flex justify-content-center" (click)="userDetails(i.id)">
+                <img [src]=i.avatar [alt]=i.first_name class="rounded-circle">
+            </div>
+            <div class="userName d-flex justify-content-center mt-3">
+                <h4>
+                    {{i.first_name}} {{i.last_name}}
+                </h4>
+            </div>
+            <div class="readMore d-flex justify-content-center mt-3">
+                <button class="btn" (click)="userDetails(i.id)">Read More</button>
+            </div>
+        </div>
+    </div>
+    <div class="pages mt-3 d-flex justify-content-center">
+        <div class="p-2 me-2 page1">
+            <i class="fa-solid fa-1 " style="color: aliceblue;"></i>
+        </div>
+        <div class="p-2 page2" (click)="page2(2)">
+            <i class="fa-solid fa-2 " style="color: #406AB3;"></i>
+        </div> 
+    </div>
+</div>
+</div>
+

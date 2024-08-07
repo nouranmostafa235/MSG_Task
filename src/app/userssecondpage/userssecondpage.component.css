@@ -1,0 +1,54 @@
+
+.nav-bar{
+    border-bottom: 2px black solid;
+}
+.title{
+    width: 25%;
+}
+.title img{
+    width: 20%;
+}
+.title h3{
+    color: #676D79;
+    font-weight: lighter;
+}
+.users{
+    color: #406AB3;
+    position: relative;
+}
+.users::after{
+    content: "";
+    background-color: #676D79;
+    height: 1px;
+    width: 200px;
+    position: absolute;
+    left: 41%;
+    bottom: -10px;
+}
+.userImage{
+    overflow: hidden;
+}
+.card img{
+    width: 60%;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.card img:hover{
+    transform: scale(1.2);
+}
+.userName{
+    color: #676D79;
+}
+.btn{
+    background-color: #406AB3;
+    color: aliceblue;
+}
+.pages div{
+    cursor: pointer;
+}
+.page1{
+    border: 1px solid #406AB3;
+}
+.page2{
+    background-color: #406AB3;
+}

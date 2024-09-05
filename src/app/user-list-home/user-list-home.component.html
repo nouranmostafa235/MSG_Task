@@ -1,8 +1,8 @@
 <div class="container mt-4 bg-body">
   <div class="nav-bar  d-flex justify-content-between mb-5">
    <div class="title d-flex">
-    <img class="logo pb-3" src="assets/imgs/Logo.png" alt="">
-    <h3 class="mt-2">MAIDS.CC</h3>
+    <img class="logo pb-3 me-2" src="assets/imgs/msg-removebg-preview.png" alt="">
+    <h3 class="mt-2">TRIAL PROJECT</h3>
 </div>
    <div class="icons d-flex justify-content-center align-items-center">
     <i class="fa-brands fa-facebook-f me-3" style="color: #676D79;"></i>
@@ -18,7 +18,7 @@
    <input [(ngModel)]="searchTerm" type="text" class="form-control w-50 mx-auto my-5" placeholder="Search by ID..." name="" id="">
     <div class="row pt-5 position-relative">
         <div *ngIf="isloading" class=" loading position-absolute d-flex justify-content-center align-items-center">
-            <span class="loader">.....</span>
+            <span class="loader">........</span>
           </div>
         <div class="col-md-6 pt-3 pb-5 card rounded-0 border-start-0 border-top-0"*ngFor="let i of data|searchId:searchTerm">
             <div class="userImage d-flex justify-content-center" (click)="userDetails(i.id)">

@@ -10,9 +10,7 @@ export class SearchIdPipe implements PipeTransform {
       return userData;
     }
 
-    return userData.filter(data =>
-      data.id.toString().includes(searchTerm)
-    );
+    return userData.filter(data => data.id.toString().includes(searchTerm)||data.first_name.toLowerCase().includes(searchTerm));
   }
 
 }
